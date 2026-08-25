@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shandow & Gradients</title>
+    <style>
+        .box{
+            width: 200px;
+            padding: 30px;
+            margin: 30px;
+            background-color: white;
+        }
+
+        /* Box Shadow */
+        .box-shadow{
+            box-shadow: 10px 10px 15px grey;
+        }
+
+        /* Box Shadow with Spread */
+        .spread-shadow{
+            box-shadow: 5px 5px 10px 5px lightgrey;
+        }
+        
+        /* Inset Shadow */
+        .inset-shadow{
+            background-color: lightblue;
+            box-shadow: inset 5px 5px 10px grey;
+        }
+
+        /* Text Shadow */
+        .text-shadow{
+            box-shadow: 5px 5px 10px 5px lightgray;
+            text-shadow: 5px 5px 10px grey;
+        }
+
+        /* Linear Gradient */
+        .linear-gradient{
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+            background: linear-gradient(to right,
+                                        blue,
+                                        purple);
+        }
+
+        /* Linear gradient with multiple colors */
+
+        .multi-gradient {
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+
+            background: linear-gradient(
+                to right,
+                red,
+                orange,
+                yellow,
+                green,
+                blue
+            );
+        }
+
+
+        /* Linear gradient with angle */
+
+        .angle-gradient {
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+
+            background: linear-gradient(
+                45deg,
+                blue,
+                pink
+            );
+        }
+
+
+        /* Radial gradient */
+
+        .radial-gradient {
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+
+            background: radial-gradient(
+                circle,
+                yellow,
+                orange,
+                red
+            );
+        }
+
+
+        /* Repeating linear gradient */
+
+        .repeating-linear {
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+
+            background: repeating-linear-gradient(
+                45deg,
+                blue 0px,
+                blue 20px,
+                white 20px,
+                white 40px
+            );
+        }
+
+
+        /* Repeating radial gradient */
+
+        .repeating-radial {
+            width: 400px;
+            height: 150px;
+            margin: 30px;
+
+            background: repeating-radial-gradient(
+                circle,
+                blue 0px,
+                blue 20px,
+                white 20px,
+                white 40px
+            );
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Shadows & Gradients</h1>
+
+
+    <h2>1. Box Shadow</h2>
+
+    <div class="box box-shadow">
+        This box has a shadow.
+    </div>
+
+
+    <h2>2. Box Shadow with Spread</h2>
+
+    <div class="box spread-shadow">
+        This shadow has spread.
+    </div>
+
+
+    <h2>3. Inset Shadow</h2>
+
+    <div class="box inset-shadow">
+        This is an inner shadow.
+    </div>
+
+
+    <h2>4. Text Shadow</h2>
+
+    <h2 class="box text-shadow">
+        Text with Shadow
+    </h2>
+
+
+    <h2>5. Linear Gradient</h2>
+
+    <div class="linear-gradient"></div>
+
+
+    <h2>6. Multiple Color Gradient</h2>
+
+    <div class="multi-gradient"></div>
+
+
+    <h2>7. Gradient with Angle</h2>
+
+    <div class="angle-gradient"></div>
+
+
+    <h2>8. Radial Gradient</h2>
+
+    <div class="radial-gradient"></div>
+
+
+    <h2>9. Repeating Linear Gradient</h2>
+
+    <div class="repeating-linear"></div>
+
+
+    <h2>10. Repeating Radial Gradient</h2>
+
+    <div class="repeating-radial"></div>
+
+</body>
+</html>

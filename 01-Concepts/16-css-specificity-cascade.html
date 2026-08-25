@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+
+        /* --------------------------------
+           1. Cascade
+        -------------------------------- */
+
+        .cascade{
+            color: blue;
+        }
+        .cascade{
+            color: green;
+        }
+
+        /* --------------------------------
+           2. Specificity
+        -------------------------------- */
+        #specificity-text{
+            color: red;
+        }
+
+        .specificity{
+            color: green;
+        }
+
+        p{
+            color: blue;
+        }
+
+        /* --------------------------------
+           3. Selector Priority
+        -------------------------------- */
+
+        #priority {
+            color: red;
+        }
+
+        .priority {
+            color: green;
+        }
+
+        /* --------------------------------
+           4. Inheritance
+        -------------------------------- */
+        .parent{
+            color: purple;
+        }
+        .parent p{
+            color: inherit;
+        }
+
+         /* --------------------------------
+           5. !important
+        -------------------------------- */
+
+        .important{
+            color: red !important;
+        }
+        #important{
+            color: blue;
+        }
+
+         /* --------------------------------
+           6. Source Order
+        -------------------------------- */
+        .source-order{
+            color: orange;
+        }
+        .source-order{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Specificity and Cascade</h1>
+
+
+    <!-- Cascade -->
+
+    <h2>1. Cascade</h2>
+
+    <p class="cascade">
+        The second CSS rule wins because both selectors have the same specificity.
+    </p>
+
+
+    <!-- Specificity -->
+
+    <h2>2. Specificity</h2>
+
+    <p id="specificity-text" class="specificity">
+        The ID selector wins because it has higher specificity.
+    </p>
+
+
+    <!-- Selector Priority -->
+
+    <h2>3. Selector Priority</h2>
+
+    <p id="priority" class="priority">
+        The ID selector has higher priority than the class selector.
+    </p>
+
+
+    <!-- Inheritance -->
+
+    <h2>4. Inheritance</h2>
+
+    <div class="parent">
+
+        <p>
+            This paragraph inherits the color from its parent.
+        </p>
+
+        <p>
+            This paragraph also inherits the color from its parent.
+        </p>
+
+    </div>
+
+
+    <!-- !important -->
+
+    <h2>5. !important</h2>
+
+    <p id="important" class="important">
+        The !important rule overrides the normal selector priority.
+    </p>
+
+
+    <!-- Source Order -->
+
+    <h2>6. Source Order</h2>
+
+    <p class="source-order">
+        The second rule wins because it appears later in the CSS.
+    </p>
+</body>
+</html>

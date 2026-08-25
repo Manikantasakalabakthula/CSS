@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Borders</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div{
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+            background-color: darkgray;
+        }
+
+        /* border-width */
+        .border-width{
+            border-width: 5px;
+        }
+
+        /* border-style */
+        .border-style{
+            border-width: 5px;
+            border-style: solid;
+        }
+
+        /* border-color */
+        .border-color{
+            border-width: 5px;
+            border-style: solid;
+            border-color: blue;
+        }
+
+        /* border-shorthand */
+        .border-shorthand{
+            border: 5px solid blue;
+        }
+
+        /* individual-borders */
+        .individual-borders{
+            border-top: 5px;
+            border-left: 5px;
+            border-bottom: 5px;
+            border-right: 5px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        /* border-radius */
+        .rounded{
+            border: 5px solid black;
+            border-radius: 25px;
+        }
+
+        /* circle */
+        .circle{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 50%;
+        }
+
+        /* outline */
+        .outline{
+            border: 5px solid blue;
+            outline: 5px dashed orange;
+        }
+
+        /* outline-offset */
+        .outline-offset{
+            border: 5px solid blue;
+            outline: 5px dashed orange;
+            outline-offset: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Borders</h1>
+
+    <h2>Border Width</h2>
+
+    <div class="border-width">
+        This box demonstrates border width.
+    </div>
+
+    <h2>Border Style</h2>
+
+    <div class="border-style">
+        This box demonstrates border style.
+    </div>
+
+    <h2>Border Color</h2>
+
+    <div class="border-color">
+        This box demonstrates border color.
+    </div>
+
+    <h2>Border Shorthand</h2>
+
+    <div class="border-shorthand">
+        This box uses the border shorthand property.
+    </div>
+
+    <h2>Individual Borders</h2>
+
+    <div class="individual-borders">
+        Each side has a different border.
+    </div>
+
+    <h2>Border Radius</h2>
+
+    <div class="rounded">
+        This box has rounded corners.
+    </div>
+
+    <h2>Circle</h2>
+
+    <div class="circle"></div>
+
+    <h2>Outline</h2>
+
+    <div class="outline">
+        This box has both a border and an outline.
+    </div>
+
+    <h2>Outline Offset</h2>
+
+    <div class="outline-offset">
+        The outline is separated from the border.
+    </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Units</title>
+
+    <style>
+
+        /* px - pixels */
+        .px-unit {
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        /* % - percentage */
+        .percentage-unit {
+            width: 50%;
+            background-color: lightgreen;
+        }
+
+        /* em - relative to the element's font size */
+        .em-unit {
+            font-size: 20px;
+            padding: 1em;
+            margin: 1em;
+            background-color: lightyellow;
+        }
+
+        /* rem - relative to the root font size */
+        html {
+            font-size: 16px;
+        }
+
+        .rem-unit {
+            font-size: 2rem;
+            padding: 1rem;
+            background-color: lightpink;
+        }
+
+        /* vw - viewport width */
+        .vw-unit {
+            width: 50vw;
+            background-color: lightcoral;
+        }
+
+        /* vh - viewport height */
+        .vh-unit {
+            height: 20vh;
+            background-color: cornflowerblue;
+        }
+
+        /* vmin - smaller viewport dimension */
+        .vmin-unit {
+            width: 30vmin;
+            height: 30vmin;
+            background-color: cadetblue;
+        }
+
+        /* vmax - larger viewport dimension */
+        .vmax-unit {
+            width: 30vmax;
+            height: 100px;
+            background-color: lightsalmon;
+        }
+
+        /* auto */
+        .auto-unit {
+            width: 300px;
+            margin: auto;
+            background-color: lightseagreen;
+        }
+
+        /* min() */
+        .min-function {
+            width: min(80%, 500px);
+            background-color: darkcyan;
+        }
+
+        /* max() */
+        .max-function {
+            width: max(50%, 300px);
+            background-color: lightsteelblue;
+        }
+
+        /* clamp() */
+        .clamp-function {
+            font-size: clamp(20px, 5vw, 50px);
+            background-color: lightgoldenrodyellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Units</h1>
+
+    <h2>Pixels - px</h2>
+
+    <div class="px-unit">
+        This box uses px units.
+    </div>
+
+    <h2>Percentage - %</h2>
+
+    <div class="percentage-unit">
+        This box uses a percentage width.
+    </div>
+
+    <h2>Em - em</h2>
+
+    <div class="em-unit">
+        This box uses em units.
+    </div>
+
+    <h2>Rem - rem</h2>
+
+    <div class="rem-unit">
+        This text and padding use rem units.
+    </div>
+
+    <h2>Viewport Width - vw</h2>
+
+    <div class="vw-unit">
+        This box uses vw.
+    </div>
+
+    <h2>Viewport Height - vh</h2>
+
+    <div class="vh-unit">
+        This box uses vh.
+    </div>
+
+    <h2>Viewport Minimum - vmin</h2>
+
+    <div class="vmin-unit">
+        This box uses vmin.
+    </div>
+
+    <h2>Viewport Maximum - vmax</h2>
+
+    <div class="vmax-unit">
+        This box uses vmax.
+    </div>
+
+    <h2>Auto</h2>
+
+    <div class="auto-unit">
+        This box uses auto margin.
+    </div>
+
+    <h2>min()</h2>
+
+    <div class="min-function">
+        This box uses the min() function.
+    </div>
+
+    <h2>max()</h2>
+
+    <div class="max-function">
+        This box uses the max() function.
+    </div>
+
+    <h2>clamp()</h2>
+
+    <div class="clamp-function">
+        This text uses clamp() for responsive font sizing.
+    </div>
+
+</body>
+
+</html>

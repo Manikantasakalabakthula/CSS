@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Box Model</title>
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            color: crimson;
+        }
+        /* Basic Box */
+        .box{
+            background-color: aqua;
+            width: 300px;
+            height: 200px;
+            margin: 40px;
+            padding: 30px;
+            border: 5px solid blue;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* box-sizing: content-box */
+        .content-box{
+            color: white;
+            background-color: blueviolet;
+            box-sizing: content-box;
+        }
+
+        /* box-sizing: border-box */
+        .border-box{
+            color: white;
+            background-color: crimson;
+            box-sizing: border-box;
+        }
+
+        /* Minimum Width */
+        .min-width{
+            color: white;
+            background-color: brown;
+            min-width: 300px;
+        }
+
+        /* Maximum Width */
+        .max-width{
+            background-color: lightcoral;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Minimum Height */
+        .min-height{
+            color: white;
+            background-color: chocolate;
+            min-height: 100px;
+        }
+
+        /* Maximum Height */
+        .max-height{
+            color: white;
+            background-color: darkblue;
+            height: 500px;
+            max-height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model</h1>
+
+    <h2>Content, Padding, Border and Margin</h2>
+
+    <div class="box">
+        This is the content of the box.
+    </div>
+
+    <h2>box-sizing: content-box</h2>
+
+    <div class="box content-box">
+        Content Box
+    </div>
+
+    <h2>box-sizing: border-box</h2>
+
+    <div class="box border-box">
+        Border Box
+    </div>
+
+    <h2>Minimum Width</h2>
+
+    <div class="min-width">
+        This element has a minimum width of 300px.
+    </div>
+
+    <h2>Maximum Width</h2>
+
+    <div class="max-width">
+        This element can grow up to a maximum width of 500px.
+    </div>
+
+    <h2>Minimum Height</h2>
+
+    <div class="min-height">
+        This element has a minimum height of 100px.
+    </div>
+
+    <h2>Maximum Height</h2>
+
+    <div class="max-height">
+        This element has a maximum height of 120px.
+        Extra content will create an overflow area.
+    </div>
+
+</body>
+
+</html>

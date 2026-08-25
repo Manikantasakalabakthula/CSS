@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        p{
+            color: blue;
+        }
+
+        table{
+            width: 100%;
+            height: 150px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /* class selector */
+        .highlight{
+            background-color: yellow;
+        }
+
+        /* ID selector */
+        #main-title{
+            color: red;
+        }
+
+        /* universal selector */
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Grouping selector */
+        h2,h3{
+            color: blueviolet;
+        }
+
+        /* Attribute selectors */
+        [type="text"]{
+            border: 2px solid blue;
+            padding: 8px;
+        }
+        
+        [type="submit"],[type="reset"]{
+            background-color: crimson;
+            color: white;
+            padding: 10px 20px;
+            border: 0px;
+            border-radius: 25px;
+        }
+        /* Descendant selector */
+        .container p{
+            font-size: 20px;
+        }
+
+        /* Child selector */
+        .parent>p{
+            color: green;
+        }
+
+        /* General sibling selector */
+        .parent~.general-sibling{
+            color: brown;
+        }
+
+        /* Adjacent sibling selector */
+        .parent+.adjacent-sibling{
+            color: teal;
+        }
+
+        /* Pseudo-class */
+        /* :hover */
+        a:hover{
+            color: red;
+        }
+
+        /* :active */
+        [type="submit"]:active{
+            color: aliceblue;
+            background-color: darkcyan;
+        }
+
+        /* :focus */
+        [type="text"]:focus{
+            background-color: bisque;
+        }
+
+        /* :visited */
+        a:visited{
+            color: blueviolet;
+        }
+
+        /* :checked */
+        #terms:checked+label{
+            color: green;
+        }
+
+        /* :disabled */
+        button:disabled{
+            background-color: grey;
+        }
+
+        /* :first-child */
+        li:first-child{
+            font-weight: bold;
+        }
+
+        /* :last-child */
+        li:last-child{
+            color: darkgreen;
+        }
+        
+        /* :nth-child */
+        tr:nth-child(3){
+            color: white;
+            background-color: darkblue;
+        }
+
+        td:nth-child(2n+1){
+            color: white;
+            background-color: blueviolet;
+        }
+
+        /* :nth-last-child */
+        tr:nth-last-child(1){
+            color: white;
+            background-color: crimson;
+        }
+        
+        td:nth-last-child(2n+2){
+            color: white;
+            background-color: darkred;
+        }
+
+        /* Pseudo-element */
+        /* ::before */
+        .pseudo::before{
+            content: "★ ";
+            color: orange;
+        }
+
+        /* ::after */
+        .pseudo::after{
+            content: " ✓";
+            color: green;
+        }
+        
+        /* ::first-letter */
+        .pseudo::first-letter{
+            color: red;
+            font-size: 40px;
+        }
+
+        /* ::first-line */
+        .pseudo-element::first-line{
+            color: darkmagenta;
+        }
+
+
+        /* ::placeholder */
+        input::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="main-title">CSS Selectors</h1>
+
+    <h2>Element Selector</h2>
+    <p>This is an element selector example.</p>
+
+    <p class="highlight">This uses a class selector.</p>
+
+    <h3>Group Selector</h3>
+
+    <div class="container">
+        <p>This is selected using a descendant selector.</p>
+    </div>
+
+    <div class="parent">
+        <p>Direct child paragraph.</p>
+
+        <div>
+            <p>Nested paragraph.</p>
+        </div>
+    </div>
+    <p class="adjacent-sibling">This is selected using a Adjacent sibling selector.</p>
+    <p class="general-sibling">This is selected using a General sibling selector.</p>
+    <p class="general-sibling">This is selected using a General sibling selector.</p>
+    <p class="general-sibling">This is selected using a General sibling selector.</p>
+    
+    <br>
+
+    <input type="text" placeholder="Text input">
+
+    <br><br>
+    
+    <button type="submit">Submit</button>
+    <button type="reset" disabled>Reset</button>
+
+    <br><br>
+
+    <a href="#">Hover over this link</a>
+
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Last Item</li>
+    </ul>
+
+    <table border="1">
+        <thead>
+            <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Role</th>
+            <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>EMP-101</td>
+            <td>Alex Rivera</td>
+            <td>Engineering</td>
+            <td>Frontend Lead</td>
+            <td>San Francisco</td>
+            </tr>
+            <tr>
+            <td>EMP-102</td>
+            <td>Priya Sharma</td>
+            <td>Product</td>
+            <td>Product Manager</td>
+            <td>Bangalore</td>
+            </tr>
+            <tr>
+            <td>EMP-103</td>
+            <td>Marcus Vance</td>
+            <td>Design</td>
+            <td>UI/UX Specialist</td>
+            <td>London</td>
+            </tr>
+            <tr>
+            <td>EMP-104</td>
+            <td>Sofia Chen</td>
+            <td>Marketing</td>
+            <td>Content Strategist</td>
+            <td>Singapore</td>
+            </tr>
+        </tbody>
+        </table>
+
+    <p class="pseudo">
+        Pseudo-element example.
+    </p>
+    <input type="checkbox" id="terms">
+    <label for="terms">I agree</label>
+    <pre class="pseudo-element">
+        CSS is used to style web pages.
+        It controls colors, layouts, fonts,
+        spacing, and many other things.
+    </pre>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Object Fit</title>
+
+    <style>
+
+        /* Common image styling */
+
+        .image {
+            width: 300px;
+            height: 200px;
+            border: 3px solid black;
+            margin: 20px;
+        }
+
+
+        /* object-fit: fill */
+
+        .fill {
+            object-fit: fill;
+        }
+
+
+        /* object-fit: contain */
+
+        .contain {
+            object-fit: contain;
+        }
+
+
+        /* object-fit: cover */
+
+        .cover {
+            object-fit: cover;
+        }
+
+
+        /* object-fit: none */
+
+        .none {
+            object-fit: none;
+        }
+
+
+        /* object-fit: scale-down */
+
+        .scale-down {
+            object-fit: scale-down;
+        }
+
+
+        /* object-position */
+
+        .position {
+            object-fit: cover;
+            object-position: right;
+        }
+
+
+        /* object-position with percentage */
+
+        .position-custom {
+            object-fit: cover;
+            object-position: 20% 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Object Fit</h1>
+
+
+    <h2>1. object-fit: fill</h2>
+
+    <img
+        class="image fill"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>2. object-fit: contain</h2>
+
+    <img
+        class="image contain"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>3. object-fit: cover</h2>
+
+    <img
+        class="image cover"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>4. object-fit: none</h2>
+
+    <img
+        class="image none"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>5. object-fit: scale-down</h2>
+
+    <img
+        class="image scale-down"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>6. object-position</h2>
+
+    <img
+        class="image position"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+
+    <h2>7. Custom object-position</h2>
+
+    <img
+        class="image position-custom"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /* Global CSS variables */
+        :root{
+            --primary-color: darkblue;
+            --secondary-color: lightblue;
+            --text-color: white;
+            --spacing: 20px;
+            --border-radius: 10px;
+        }
+
+        /* Using global variables */
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        /* Header */
+        .header{
+            color: var(--text-color);
+            background-color: var(--primary-color);
+            padding: var(--spacing);
+            text-align: center;
+        }
+
+        /* Card */
+        .card{
+            background-color: var(--text-color);
+            border: 2px solid var(--primary-color);
+            padding: var(--spacing);
+            margin: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+
+        /* Button */
+        .button{
+            color: var(--text-color);
+            border: 0;
+            border-radius: var(--border-radius);
+            background-color: var(--primary-color);
+            padding: 10px 20px;
+        }
+
+        /* local box */
+        .local-box{
+            background-color: orange;
+            padding: 30px;
+            margin: var(--spacing);
+        }
+
+        /* fallback */
+        .fallback{
+            background-color: white;
+            padding: var(--spacing);
+            margin: var(--spacing);
+        }
+
+        /* custom theme */
+        .custom-theme{
+            --primary-color: purple;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+            padding: var(--spacing);
+            margin: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+
+        /* calculated box */
+        .calculated-box{
+            width: calc(100% - (var(--spacing) * 2));
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: var(--spacing);
+            margin: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <h1>CSS Variables</h1>
+
+        <p>
+            CSS variables allow us to store and reuse values.
+        </p>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- Reusing variables -->
+
+        <section class="card">
+
+            <h2>1. Reusing Variables</h2>
+
+            <p>
+                This card uses CSS variables for colors,
+                spacing, and border radius.
+            </p>
+
+            <button class="button">
+                Click Me
+            </button>
+
+        </section>
+
+
+        <!-- Local variable -->
+
+        <section class="local-box">
+
+            <h2>2. Local Variable</h2>
+
+            <p>
+                This element has its own local CSS variable.
+            </p>
+
+        </section>
+
+
+        <!-- Fallback value -->
+
+        <section class="fallback">
+
+            <h2>3. Fallback Value</h2>
+
+            <p>
+                A fallback value is used when the variable
+                does not exist.
+            </p>
+
+        </section>
+
+
+        <!-- Changing a variable -->
+
+        <section class="custom-theme">
+
+            <h2>4. Changing a Variable</h2>
+
+            <p>
+                This section changes the primary color
+                locally without changing the global variable.
+            </p>
+
+        </section>
+
+
+        <!-- calc() with variables -->
+
+        <section class="calculated-box">
+
+            <h2>5. Variables with calc()</h2>
+
+            <p>
+                CSS variables can also be used inside CSS functions.
+            </p>
+
+        </section>
+
+    </main>
+</body>
+</html>

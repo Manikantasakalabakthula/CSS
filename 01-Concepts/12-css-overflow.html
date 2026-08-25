@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+
+        /* Common box styling */
+        .box{
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            margin-bottom: 30px;
+        }
+
+        /* overflow: visible */
+        .visible{
+            background-color: aquamarine;
+            overflow: visible;
+        }
+
+        /* overflow: hidden */
+        .hidden{
+            background-color: aqua;
+            overflow: hidden;
+        }
+
+        /* overflow: scroll */
+        .scroll{
+            overflow: scroll;
+        }
+
+        /* overflow: auto */
+        .auto{
+            overflow: auto;
+        }
+
+        /* overflow-x */
+        .overflow-x{
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        /* overflow-y */
+        .overflow-y{
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Overflow</h1>
+
+    <h2>overflow: visible</h2>
+
+    <div class="box visible">
+        This content demonstrates visible overflow.<br>
+        Extra content can extend outside the box.<br>
+        The browser does not hide the content.<br>
+        This content may appear outside the box.<br>
+        The content continues beyond the fixed height.<br>
+        This demonstrates visible overflow.
+    </div>
+
+    <br><br>
+
+    <h2>overflow: hidden</h2>
+
+    <div class="box hidden">
+        This content demonstrates hidden overflow.<br>
+        Extra content is larger than the box.<br>
+        The browser clips the extra content.<br>
+        Some content may not be visible.<br>
+        Content outside the box is hidden.<br>
+        This content is also hidden.
+    </div>
+
+    <br><br>
+    
+    <h2>overflow: scroll</h2>
+
+    <div class="box scroll">
+        This content demonstrates scroll overflow.<br>
+        The content is larger than the box.<br>
+        Scrollbars allow access to extra content.<br>
+        You can scroll to see this content.<br>
+        More content is available by scrolling.<br>
+        This is the final line of the content.
+    </div>
+
+    <br><br>
+    
+    <h2>overflow: auto</h2>
+
+    <div class="box auto">
+        This content demonstrates auto overflow.<br>
+        The content is larger than the box.<br>
+        A scrollbar appears when necessary.<br>
+        You can scroll to access extra content.<br>
+        This content is part of the overflow.<br>
+        This is the final line of the content.
+    </div>
+
+    <br><br>
+    
+    <h2>overflow-x</h2>
+
+    <div class="box overflow-x">
+        This is a long line for horizontal overflow demonstration.<br>
+        This line is also intentionally very long for scrolling.<br>
+        Horizontal scrolling can access extra content.<br>
+        This content stays on one line using nowrap.<br>
+        The content can extend beyond the horizontal space.<br>
+        This is the final horizontal overflow line.
+    </div>
+
+    <br><br>
+    
+    <h2>overflow-y</h2>
+
+    <div class="box overflow-y">
+        This content demonstrates vertical overflow.<br>
+        The content continues below the available height.<br>
+        Vertical scrolling allows access to more content.<br>
+        This content is below the visible area.<br>
+        More content is available by scrolling down.<br>
+        This is the final line of the content.
+    </div>
+</body>
+</html>

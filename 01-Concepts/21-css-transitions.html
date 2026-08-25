@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+    <style>
+        /* Basic Box Styling */
+        .box{
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Basic Transition */
+        .basic{
+            background-color: lightblue;
+            transition: background-color 1s;
+        }
+        .basic:hover{
+            background-color: blue;
+            color: white;
+        }
+
+        /* Transition Duration */
+        .duration{
+            background-color: lightgreen;
+            transition: background-color;
+            transition-duration: 2s;
+        }
+        .duration:hover{
+            background-color: green;
+        }
+
+        /* Transition Timing Functions */
+        .timing{
+            margin-bottom: 10px;
+            background-color: orange;
+            transition: width;
+            transition-duration: 1s;
+        }
+        .timing:hover{
+            width: 300px;
+        }
+        /* linear */
+        .linear{
+            transition-timing-function: linear;
+        }
+        /* ease */
+        .ease{
+            transition-timing-function: ease;
+        }
+        /* ease-in */
+        .ease-in{
+            transition-timing-function: ease-in;
+        }
+        /* ease-out */
+        .ease-out{
+            transition-timing-function: ease-out;
+        }
+        /* ease-in-out */
+        .ease-in-out{
+            transition-timing-function: ease-in-out;
+        }
+
+        /* Transition Delay */
+        .delay{
+            background-color: lightpink;
+            transition: width;
+            transition-duration: 1s;
+            transition-delay: 1s;
+        }
+        .delay:hover{
+            width: 300px;
+        }
+
+        /* Multiple Properties */
+        .multiple{
+            color: white;
+            background-color: purple;
+            transition: width 1s,
+                        background-color 1s,
+                        color 1s;
+        }
+        .multiple:hover{
+            background-color: yellow;
+            color: black;
+            width: 300px;
+        }
+
+        /* Transition Shorthand */
+        .shorthand{
+            color: white;
+            background-color: darkcyan;
+            transition: all 1s ease;
+        }
+        .shorthand:hover{
+            width: 300px;
+        }
+
+        /* Button Transition */
+        .button{
+            padding: 12px 25px;
+            border: none;
+            background-color: crimson;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s,
+                        transform 0.3s;
+        }
+        .button:hover{
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transitions</h1>
+
+
+    <h2>1. Basic Transition</h2>
+
+    <div class="box basic">
+        Hover over me
+    </div>
+
+
+    <h2>2. Transition Duration</h2>
+
+    <div class="box duration">
+        Hover over me
+    </div>
+
+
+    <h2>3. Transition Timing Functions</h2>
+
+    <div class="box timing linear">
+        Linear
+    </div>
+
+    <div class="box timing ease">
+        Ease
+    </div>
+
+    <div class="box timing ease-in">
+        Ease In
+    </div>
+
+    <div class="box timing ease-out">
+        Ease Out
+    </div>
+
+    <div class="box timing ease-in-out">
+        Ease In Out
+    </div>
+
+
+    <h2>4. Transition Delay</h2>
+
+    <div class="box delay">
+        Hover over me
+    </div>
+
+
+    <h2>5. Multiple Properties</h2>
+
+    <div class="box multiple">
+        Hover over me
+    </div>
+
+
+    <h2>6. Transition Shorthand</h2>
+
+    <div class="box shorthand">
+        Hover over me
+    </div>
+
+
+    <h2>7. Button Transition</h2>
+
+    <button class="box button">
+        Hover over me
+    </button>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Responsive Design</title>
+
+    <style>
+
+        /* Basic page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* Responsive header */
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background-color: darkblue;
+            color: white;
+        }
+
+
+        /* Flexible container */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* Responsive card layout */
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+            background-color: lightblue;
+        }
+
+
+        /* Responsive image */
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Responsive text */
+
+        .responsive-heading {
+            font-size: clamp(24px, 5vw, 50px);
+            text-align: center;
+        }
+
+
+        /* Responsive spacing */
+
+        .section {
+            padding: 5vw;
+        }
+
+
+        /* Tablet layout */
+
+        @media (max-width: 768px) {
+
+            .cards {
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+        }
+
+
+        /* Mobile layout */
+
+        @media (max-width: 480px) {
+
+            .header {
+                padding: 20px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Responsive Design</h1>
+
+        <p>
+            This page adjusts to different screen sizes.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- Responsive text -->
+
+        <section class="section">
+
+            <h2 class="responsive-heading">
+                Responsive Heading
+            </h2>
+
+            <p>
+                The heading changes its size depending on the screen width.
+            </p>
+
+        </section>
+
+
+        <!-- Flexible layout -->
+
+        <section class="section">
+
+            <h2>Flexible Layout</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>
+                        This card adjusts according to the available space.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>
+                        This card also adjusts according to the screen.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>
+                        The layout changes on smaller screens.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Responsive image -->
+
+        <section class="section">
+
+            <h2>Responsive Image</h2>
+
+            <img
+                class="responsive-image"
+                src="https://placehold.co/1200x400"
+                alt="Responsive example image"
+            >
+
+        </section>
+
+
+        <!-- Responsive units -->
+
+        <section class="section">
+
+            <h2>Responsive Units</h2>
+
+            <p>
+                This section uses responsive units such as %, vw and clamp().
+            </p>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        /* Common Box Styling */
+        .box{
+            padding: 10px;
+            border: 2px solid black;
+            background-color: #f2f2f2;
+        }
+        /* display: flex; */
+        .flex-container{
+            display: flex;
+        }
+
+        .item{
+            padding: 20px;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+
+        /* flex-direction */
+        .direction{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* justify-content */
+        .justify{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* align-items */
+        .align{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* flex-wrap */
+        .wrap .item,.align-content .item{
+            width: 300px;
+        }
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* align-content */
+        .align-content{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 10px;
+        }
+
+        /* flex-grow */
+        .grow{
+            display: flex;
+            gap: 10px;
+        }
+        .grow .item{
+            flex-grow: 1;
+        }
+        .grow .large{
+            flex-grow: 2;
+        }
+
+        /* flex-shrink */
+        .shrink{
+            display: flex;
+            gap: 10px;
+        }
+        .shrink .item, .no-shrink{
+            width: 800px;
+        }
+        .shrink .item{
+            flex-shrink: 1;
+        }
+        .shrink .no-shrink{
+            flex-shrink: 0;
+        }
+
+        /* flex-basis */
+        .basis{
+            display: flex;
+            gap: 10px;
+        }
+        .basis .item{
+            width: 400px;
+            flex-basis: 400px;
+        }
+
+        /* flex */
+        .flex-property{
+            display: flex;
+            gap: 10px;
+        }
+        .flex-property .item{
+            flex: 1;
+        }
+        .flex-property .large{
+            flex: 2;
+        }
+
+        /* align-self */
+        .self{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            height: 150px;
+        }
+        .self .item{
+            width: 400px;
+        }
+        .self .special{
+            align-self: flex-start;
+        }
+
+        /* order */
+        .order{
+            display: flex;
+            gap: 10px;
+        }
+        .order .first{
+            order: 3;
+        }
+        .order .second{
+            order: 1;
+        }
+        .order .third{
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Flexbox</h1>
+
+
+    <h2>1. Flex Container and Flex Items</h2>
+
+    <div class="box flex-container">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>2. flex-direction</h2>
+
+    <div class="box direction">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>3. justify-content</h2>
+
+    <div class="box justify">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>4. align-items</h2>
+
+    <div class="box align">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>5. flex-wrap</h2>
+
+    <div class="box wrap">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+
+    </div>
+
+
+    <h2>6. align-content</h2>
+
+    <div class="box align-content">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+
+    </div>
+
+
+    <h2>7. flex-grow</h2>
+
+    <div class="box grow">
+
+        <div class="item">Item 1</div>
+        <div class="item large">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>8. flex-shrink</h2>
+
+    <div class="box shrink">
+
+        <div class="item">Item 1</div>
+        <div class="item no-shrink">Item 2</div>
+
+    </div>
+
+
+    <h2>9. flex-basis</h2>
+
+    <div class="box basis">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>10. flex</h2>
+
+    <div class="box flex-property">
+
+        <div class="item">Item 1</div>
+        <div class="item large">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>11. align-self</h2>
+
+    <div class="box self">
+
+        <div class="item">Item 1</div>
+        <div class="item special">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <h2>12. order</h2>
+
+    <div class="box order">
+
+        <div class="item first">Item 1</div>
+        <div class="item second">Item 2</div>
+        <div class="item third">Item 3</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        /* Basic Box Styling */
+        .box {
+            width: 120px;
+            height: 80px;
+            margin: 40px;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            text-align: center;
+        }
+
+        /* translate() */
+        .translate{
+            transform: translate(50px, 20px);
+        }
+
+        /* translateX() */
+        .translate-x{
+            transform: translateX(100px);
+        }
+
+        /* translateY() */
+        .translate-y{
+            transform: translateY(40px);
+        }
+
+        /* scale() */
+        .scale{
+            transform: scale(1.5);
+        }
+
+        /* scaleX() */
+        .scale-x{
+            transform: scaleX(1.5);
+        }
+
+        /* scaleY() */
+        .scale-y{
+            transform: scaleY(1.5);
+        }
+
+        /* rotate() */
+        .rotate{
+            transform: rotate(20deg);
+        }
+
+        /* skew() */
+        .skew{
+            transform: skew(20deg);
+        }
+
+        /* transform-origin */
+        .origin{
+            transform: rotate(10deg);
+            transform-origin: top left;
+        }
+
+        /* Combining Transforms */
+        .combined{
+            transform: translate(30px, 10px)
+                        rotate(20deg)
+                        scale(1.2);
+        }
+
+        /* Transform with Hover */
+        .hover-transform{
+            transition: all 1s;
+        }
+        .hover-transform:hover{
+            transform: scale(1.2)
+                        rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transforms</h1>
+
+
+    <h2>1. translate()</h2>
+
+    <div class="box translate">
+        Translate
+    </div>
+
+
+    <h2>2. translateX()</h2>
+
+    <div class="box translate-x">
+        Translate X
+    </div>
+
+
+    <h2>3. translateY()</h2>
+
+    <div class="box translate-y">
+        Translate Y
+    </div>
+
+
+    <h2>4. scale()</h2>
+
+    <div class="box scale">
+        Scale
+    </div>
+
+
+    <h2>5. scaleX()</h2>
+
+    <div class="box scale-x">
+        Scale X
+    </div>
+
+
+    <h2>6. scaleY()</h2>
+
+    <div class="box scale-y">
+        Scale Y
+    </div>
+
+
+    <h2>7. rotate()</h2>
+
+    <div class="box rotate">
+        Rotate
+    </div>
+
+
+    <h2>8. skew()</h2>
+
+    <div class="box skew">
+        Skew
+    </div>
+
+
+    <h2>9. transform-origin</h2>
+
+    <div class="box origin">
+        Origin
+    </div>
+
+
+    <h2>10. Combining Transforms</h2>
+
+    <div class="box combined">
+        Combined
+    </div>
+
+
+    <h2>11. Transform with Hover</h2>
+
+    <div class="box hover-transform">
+        Hover over me
+    </div>
+</body>
+</html>

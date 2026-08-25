@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        /* Common styling */
+        .box {
+            width: 500px;
+            height: 200px;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid black;
+            background-color: lightgreen;
+        }
+
+        .box-1{
+            width: 200px;
+            height: 100px;
+            padding: 5px;
+            border: 2px solid black;
+            background-color: lightpink;
+        }
+
+        /* position:static */
+        .static{
+            position: static;
+            background-color: lightblue;
+        }
+
+        /* position:relative */
+        .relative{
+            position: relative;
+            top: 30px;
+            left: 50px;
+        }
+
+        /* position:absolute */
+        .absolute-parent{
+            background-color: lightseagreen;
+            position: relative;
+        }
+        .absolute{
+            position: absolute;
+            top: 40px;
+            left: 60px;
+        }
+
+        /* position: fixed */
+        .fixed{
+            background-color: lightyellow;
+            width: 150px;
+            height: 80px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        /* position: sticky */
+        .sticky{
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position</h1>
+
+    <h2>position: static</h2>
+
+    <div class="box static">
+        Static position
+    </div>
+
+    <h2>position: relative</h2>
+
+    <div class="box">
+        <div class="box-1 relative">Relative position</div>
+    </div>
+
+    <h2>position: absolute</h2>
+
+    <div class="box absolute-parent">
+
+        Parent element
+
+        <div class="box-1 absolute">
+            Absolute position
+        </div>
+
+    </div>
+
+    <h2>position: fixed</h2>
+
+    <div class="box fixed">
+        Fixed position
+    </div>
+
+    <h2>position: sticky</h2>
+
+    <div class="box sticky">
+        Sticky position
+    </div>
+
+    <p>
+        Scroll down to see how sticky positioning works.
+    </p>
+
+    <p>
+        CSS positioning allows elements to be placed in specific locations.
+    </p>
+
+    <p>
+        Positioning can be used for navigation bars, buttons, labels,
+        overlays, floating elements, and many other UI components.
+    </p>
+
+    <p>
+        This is additional content to create enough page height for scrolling.
+    </p>
+
+    <p>
+        Keep scrolling to observe the sticky element.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+
+    <p>
+        More content is added here for demonstration.
+    </p>
+</body>
+</html>

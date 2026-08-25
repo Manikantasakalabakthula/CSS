@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Functions</title>
+
+    <style>
+
+        /* CSS variables */
+
+        :root {
+            --primary-color: darkblue;
+            --spacing: 20px;
+        }
+
+
+        /* calc() */
+
+        .calc-box {
+            width: calc(100% - 40px);
+            padding: var(--spacing);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+
+        /* min() */
+
+        .min-box {
+            width: min(80%, 500px);
+            padding: 20px;
+            margin-top: 20px;
+            background-color: lightblue;
+        }
+
+
+        /* max() */
+
+        .max-box {
+            width: max(50%, 300px);
+            padding: 20px;
+            margin-top: 20px;
+            background-color: lightgreen;
+        }
+
+
+        /* clamp() */
+
+        .clamp-text {
+            font-size: clamp(20px, 4vw, 40px);
+            margin-top: 20px;
+        }
+
+
+        /* var() */
+
+        .var-box {
+            padding: var(--spacing);
+            margin-top: 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+
+        /* rgb() */
+
+        .rgb-box {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgb(255, 100, 50);
+        }
+
+
+        /* rgba() */
+
+        .rgba-box {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+
+        /* hsl() */
+
+        .hsl-box {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: hsl(200, 80%, 50%);
+        }
+
+
+        /* hsla() */
+
+        .hsla-box {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: hsla(120, 70%, 40%, 0.5);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Functions</h1>
+
+
+    <h2>1. calc()</h2>
+
+    <div class="calc-box">
+        This box uses calc().
+    </div>
+
+
+    <h2>2. min()</h2>
+
+    <div class="min-box">
+        This box uses min().
+    </div>
+
+
+    <h2>3. max()</h2>
+
+    <div class="max-box">
+        This box uses max().
+    </div>
+
+
+    <h2>4. clamp()</h2>
+
+    <p class="clamp-text">
+        This text uses clamp().
+    </p>
+
+
+    <h2>5. var()</h2>
+
+    <div class="var-box">
+        This box uses a CSS variable.
+    </div>
+
+
+    <h2>6. rgb()</h2>
+
+    <div class="rgb-box">
+        This box uses rgb().
+    </div>
+
+
+    <h2>7. rgba()</h2>
+
+    <div class="rgba-box">
+        This box uses rgba().
+    </div>
+
+
+    <h2>8. hsl()</h2>
+
+    <div class="hsl-box">
+        This box uses hsl().
+    </div>
+
+
+    <h2>9. hsla()</h2>
+
+    <div class="hsla-box">
+        This box uses hsla().
+    </div>
+
+</body>
+
+</html>
