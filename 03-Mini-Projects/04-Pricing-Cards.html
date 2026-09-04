@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background-color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .pricing-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 1050px;
+      width: 100%;
+    }
+    .pricing-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 2px solid #e2e8f0;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.08);
+    }
+    .pricing-card.featured {
+      border-color: #2563eb;
+      background: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+    }
+    .badge {
+      position: absolute;
+      top: -12px;
+      align-self: center;
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+    }
+    .plan-title {
+      font-size: 1.25rem;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .plan-desc {
+      color: #64748b;
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+    }
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 24px;
+    }
+    .price span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+    .feature-item {
+      color: #334155;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .feature-item::before {
+      content: "✓";
+      color: #2563eb;
+      font-weight: 700;
+    }
+    .feature-item.disabled {
+      color: #94a3b8;
+      text-decoration: line-through;
+    }
+    .feature-item.disabled::before {
+      content: "✕";
+      color: #94a3b8;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: 1px solid #2563eb;
+      background: transparent;
+      color: #2563eb;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #eff6ff;
+    }
+    .btn.primary {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+    .btn.primary:hover {
+      background-color: #1d4ed8;
+    }
+    @media (min-width: 768px) {
+      .pricing-container {
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .pricing-card {
+        flex: 1;
+      }
+      .pricing-card.featured {
+        transform: scale(1.04);
+      }
+      .pricing-card.featured:hover {
+        transform: scale(1.04) translateY(-4px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="pricing-card">
+      <h3 class="plan-title">Starter</h3>
+      <p class="plan-desc">For individuals and side projects.</p>
+      <div class="price">$9<span>/mo</span></div>
+      <ul class="features-list">
+        <li class="feature-item">1 Project</li>
+        <li class="feature-item">5GB Storage</li>
+        <li class="feature-item">Community Support</li>
+        <li class="feature-item disabled">Custom Domain</li>
+        <li class="feature-item disabled">Analytics Dashboard</li>
+      </ul>
+      <button class="btn">Get Started</button>
+    </div>
+
+    <div class="pricing-card featured">
+      <span class="badge">Most Popular</span>
+      <h3 class="plan-title">Professional</h3>
+      <p class="plan-desc">For growing creators and professionals.</p>
+      <div class="price">$29<span>/mo</span></div>
+      <ul class="features-list">
+        <li class="feature-item">Unlimited Projects</li>
+        <li class="feature-item">50GB Storage</li>
+        <li class="feature-item">Priority Email Support</li>
+        <li class="feature-item">Custom Domain</li>
+        <li class="feature-item disabled">Analytics Dashboard</li>
+      </ul>
+      <button class="btn primary">Get Started</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3 class="plan-title">Enterprise</h3>
+      <p class="plan-desc">For teams with advanced requirements.</p>
+      <div class="price">$79<span>/mo</span></div>
+      <ul class="features-list">
+        <li class="feature-item">Unlimited Projects</li>
+        <li class="feature-item">500GB Storage</li>
+        <li class="feature-item">24/7 Dedicated Support</li>
+        <li class="feature-item">Custom Domain</li>
+        <li class="feature-item">Analytics Dashboard</li>
+      </ul>
+      <button class="btn">Contact Sales</button>
+    </div>
+  </div>
+</body>
+</html>
