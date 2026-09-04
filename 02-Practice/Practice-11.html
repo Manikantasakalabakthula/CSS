@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 2rem 1rem;
+            background-color: #f4f4f9;
+        }
+
+        h2{
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        .responsive-box{
+            width: 100%;
+            max-width: 900px;
+            margin: 0px auto;
+            padding: 1.25rem;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid green;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .responsive-box h3{
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .responsive-box p{
+            font-size: 0.7rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* TABLET SCREEN */
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            h2{
+                font-size: 2rem;
+            }
+            .responsive-box{
+                border-left-color: orange;
+                padding: 1.5rem;
+            }
+            .responsive-box h3{
+                font-size: 1.25rem;
+            }
+            .responsive-box p{
+                font-size: 0.8rem;
+            }
+        }
+
+        /* DESKTOP */
+        @media screen and (min-width:1024px) {
+            h2{
+                font-size: 2.25rem;
+            }
+            .responsive-box{
+                border-left-color: red;
+                padding: 1.75rem;
+            }
+            .responsive-box h3{
+                font-size: 1.5rem;
+            }
+            .responsive-box p{
+                font-size: 1rem;
+            }
+        }
+
+        /* MEDIA QUERIES */
+        .media-box{
+            width: 100%;
+            max-width: 900px;
+            background-color: skyblue;
+            padding: 1rem 0.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 0px auto;
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .media-box{
+                font-size: 1rem;
+                padding: 2rem 1rem;
+                color: white;
+                background-color: green;
+            }
+        }
+        @media screen and (min-width:1024px){
+            .media-box{
+                font-size: 1.25rem;
+                padding: 3rem 2rem;
+                background-color: orangered;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- RESPONSIVE DESIGN -->
+
+    <h2>Q21. Responsive Layout</h2>
+
+    <div class="responsive-box">
+
+        <h3>Responsive Section</h3>
+
+        <p>
+            This section should look different on
+            desktop, tablet and mobile screens.
+        </p>
+
+    </div>
+
+    <!-- Requirements:
+         - Create a flexible layout
+         - Use responsive units
+         - Use max-width
+         - Make it mobile friendly
+    -->
+
+
+    <!-- MEDIA QUERIES -->
+
+    <h2>Q22. Media Query</h2>
+
+    <div class="media-box">
+        Resize the browser window.
+    </div>
+
+    <!-- Requirements:
+         Desktop:
+         - Large font
+         - Large padding
+
+         Mobile:
+         - Smaller font
+         - Smaller padding
+         - Different background color
+
+         Use @media.
+    -->
+
+</body>
+</html>

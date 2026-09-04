@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS VARIABLES AND FUNCTIONS</title>
+    <style>
+        *{
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        body{
+            padding: 20px;
+        }
+        :root{
+            --main-color: darkgreen;
+            --text-color: white;
+            --spacing: 10px 20px;
+            --border-radius: 10px;
+        }
+
+        /* CSS VARIABLES */
+        .variable-card{
+            background-color: var(--main-color);
+            color: var(--text-color);
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+        .variable-card h3{
+            font-size: 25px;
+        }
+        .variable-card p{
+            font-size: 18px;
+        }
+        button{
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: blue;
+            color: var(--text-color);
+        }
+
+        /* CSS FUNCTIONS */
+        .function-box {
+            width: calc(100% - 40px);
+            min-width: max(300px, 50%);
+            max-width: min(800px, 90vw);
+            font-size: clamp(1rem, 2.5vw, 1.75rem);
+            padding: clamp(12px, 3vw, 24px);
+            margin: 20px auto;
+            box-sizing: border-box;
+            color: #ccc;
+            background-color: #333;
+            border: 1px solid #d4d4d8;
+            border-radius: 8px;
+            text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <!-- CSS VARIABLES -->
+
+    <h2>Q32. CSS Variables</h2>
+
+    <div class="variable-card">
+
+        <h3>CSS Variables</h3>
+
+        <p>
+            Use custom properties to control this card.
+        </p>
+
+        <button>
+            Learn More
+        </button>
+
+    </div>
+
+    <!-- Requirements:
+         Create variables for:
+         - Main color
+         - Text color
+         - Spacing
+         - Border radius
+
+         Use var().
+    -->
+
+
+    <!-- CSS FUNCTIONS -->
+
+    <h2>Q33. CSS Functions</h2>
+
+    <div class="function-box">
+        CSS Functions
+    </div>
+
+    <!-- Requirements:
+         Practice:
+         - calc()
+         - min()
+         - max()
+         - clamp()
+    -->
+
+</body>
+</html>

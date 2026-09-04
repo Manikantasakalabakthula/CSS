@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Theory Practice</title>
+  <style>
+    /* =========================================
+       Basic General Styles
+       ========================================= */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #222222;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    /* General Question Style */
+    .question {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #0b57d0;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* General Answer Style */
+    .answer {
+      font-size: 0.95rem;
+      color: #444444;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #e5e5e5;
+    }
+
+    .answer p {
+      margin: 6px 0;
+    }
+
+    .answer ul, .answer ol {
+      margin: 8px 0 8px 20px;
+      padding-left: 5px;
+    }
+
+    .answer li {
+      margin-bottom: 4px;
+    }
+
+    .answer code {
+      background-color: #f1f3f4;
+      color: #c7254e;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: Consolas, monospace;
+      font-size: 0.9em;
+    }
+
+    .answer pre {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 0.9em;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>CSS Theory & Practice</h1>
+
+    <!-- Q1 & A1 -->
+    <div class="question">Q1. What is CSS? Why is CSS used in web development? Explain the different ways to add CSS to an HTML document.</div>
+    <div class="answer">
+      <p><strong>CSS (Cascading Style Sheets)</strong> is a stylesheet language used to design and format the appearance of HTML documents.</p>
+      <p><strong>Why CSS is used:</strong> It separates document structure from styling, enables reusable styles across web pages, improves page loading speed, and makes pages responsive across devices.</p>
+      <p><strong>Ways to add CSS:</strong></p>
+      <ul>
+        <li><strong>Inline CSS:</strong> Added directly in an HTML tag using the <code>style</code> attribute.</li>
+        <li><strong>Internal CSS:</strong> Placed inside a <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section.</li>
+        <li><strong>External CSS:</strong> Linked from a separate file using <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+      </ul>
+    </div>
+
+    <!-- Q2 & A2 -->
+    <div class="question">Q2. What are CSS selectors? Explain Element, Class, ID, Universal, and Grouping selectors with examples.</div>
+    <div class="answer">
+      <p>CSS selectors are patterns used to select and target the HTML elements you want to style.</p>
+      <ul>
+        <li><strong>Element:</strong> Selects tags by element name (e.g., <code>p { color: blue; }</code>).</li>
+        <li><strong>Class (<code>.</code>):</strong> Selects elements by class attribute (e.g., <code>.btn { padding: 8px; }</code>).</li>
+        <li><strong>ID (<code>#</code>):</strong> Selects a single unique element by ID (e.g., <code>#header { background: gray; }</code>).</li>
+        <li><strong>Universal (<code>*</code>):</strong> Selects all elements on the page (e.g., <code>* { margin: 0; }</code>).</li>
+        <li><strong>Grouping (<code>,</code>):</strong> Applies the same rules to multiple selectors (e.g., <code>h1, h2 { color: black; }</code>).</li>
+      </ul>
+    </div>
+
+    <!-- Q3 & A3 -->
+    <div class="question">Q3. What is the difference between descendant, child, adjacent sibling, and general sibling selectors? Give an example of each.</div>
+    <div class="answer">
+      <ul>
+        <li><strong>Descendant (<code>space</code>):</strong> Matches all descendants at any nesting level (e.g., <code>div p</code>).</li>
+        <li><strong>Child (<code>&gt;</code>):</strong> Matches only direct children (e.g., <code>ul > li</code>).</li>
+        <li><strong>Adjacent Sibling (<code>+</code>):</strong> Matches an element directly following another element (e.g., <code>h2 + p</code>).</li>
+        <li><strong>General Sibling (<code>~</code>):</strong> Matches all sibling elements following another element (e.g., <code>h2 ~ p</code>).</li>
+      </ul>
+    </div>
+
+    <!-- Q4 & A4 -->
+    <div class="question">Q4. What are attribute selectors in CSS? Explain how [type="text"] works with an example.</div>
+    <div class="answer">
+      <p>Attribute selectors target elements based on an attribute name or value.</p>
+      <p><code>[type="text"]</code> targets only input elements that have <code>type="text"</code>.</p>
+      <pre>input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 6px;
+}</pre>
+    </div>
+
+    <!-- Q5 & A5 -->
+    <div class="question">Q5. Explain the different ways to represent colors in CSS. What are HEX, RGB/RGBA, and HSL/HSLA?</div>
+    <div class="answer">
+      <ul>
+        <li><strong>Named Colors:</strong> Standard keywords like <code>red</code> or <code>blue</code>.</li>
+        <li><strong>HEX:</strong> Hexadecimal color codes (e.g., <code>#ff0000</code>).</li>
+        <li><strong>RGB / RGBA:</strong> Red, Green, Blue (0-255) with optional Alpha opacity 0-1 (e.g., <code>rgba(255, 0, 0, 0.5)</code>).</li>
+        <li><strong>HSL / HSLA:</strong> Hue (0-360), Saturation (0-100%), Lightness (0-100%), and Alpha opacity (e.g., <code>hsl(0, 100%, 50%)</code>).</li>
+      </ul>
+    </div>
+
+    <!-- Q6 & A6 -->
+    <div class="question">Q6. Explain commonly used CSS properties for styling text and fonts with examples.</div>
+    <div class="answer">
+      <pre>p {
+  font-family: Arial, sans-serif; /* Typeface */
+  font-size: 16px;                /* Text size */
+  font-weight: bold;              /* Text thickness */
+  text-align: center;             /* Alignment: left, right, center */
+  text-decoration: underline;     /* Underline or none */
+  line-height: 1.5;               /* Spacing between lines */
+}</pre>
+    </div>
+
+    <!-- Q7 & A7 -->
+    <div class="question">Q7. What are CSS units? Explain the difference between px, %, em, rem, vw, and vh.</div>
+    <div class="answer">
+      <ul>
+        <li><code>px</code>: Absolute pixels (fixed size).</li>
+        <li><code>%</code>: Relative to the parent element's size.</li>
+        <li><code>em</code>: Relative to the font-size of the element itself.</li>
+        <li><code>rem</code>: Relative to the root <code>&lt;html&gt;</code> element's font-size.</li>
+        <li><code>vw</code> / <code>vh</code>: 1% of the viewport width / height.</li>
+      </ul>
+    </div>
+
+    <!-- Q8 & A8 -->
+    <div class="question">Q8. Explain the CSS box model (content, padding, border, margin) and box-sizing.</div>
+    <div class="answer">
+      <p>Every HTML element is treated as a rectangular box consisting of:</p>
+      <ol>
+        <li><strong>Content:</strong> Text, images, or child elements.</li>
+        <li><strong>Padding:</strong> Space inside the border, surrounding content.</li>
+        <li><strong>Border:</strong> Line wrapped around padding and content.</li>
+        <li><strong>Margin:</strong> Space outside the border separating neighboring elements.</li>
+      </ol>
+      <p><strong><code>box-sizing</code>:</strong> <code>content-box</code> adds padding/border to width; <code>border-box</code> includes padding/border inside the specified width.</p>
+    </div>
+
+    <!-- Q9 & A9 -->
+    <div class="question">Q9. Explain the difference between block, inline, inline-block, display: none, visibility: hidden, and opacity: 0.</div>
+    <div class="answer">
+      <ul>
+        <li><code>block</code>: Starts on a new line and takes full width. Respects width and height.</li>
+        <li><code>inline</code>: Stays inline with text. Ignores width and height.</li>
+        <li><code>inline-block</code>: Stays inline with text, but respects width and height.</li>
+        <li><code>display: none</code>: Completely removes element from document layout.</li>
+        <li><code>visibility: hidden</code>: Hides element visually, but preserves its empty space.</li>
+        <li><code>opacity: 0</code>: Makes element transparent; space is preserved and it remains clickable.</li>
+      </ul>
+    </div>
+
+    <!-- Q10 & A10 -->
+    <div class="question">Q10. Explain static, relative, absolute, fixed, and sticky positioning with use cases.</div>
+    <div class="answer">
+      <ul>
+        <li><code>static</code>: Default flow. Offsets (top/left) do not apply.</li>
+        <li><code>relative</code>: Moved relative to its normal position without affecting others.</li>
+        <li><code>absolute</code>: Positioned relative to its closest positioned ancestor. (Use case: popup close buttons).</li>
+        <li><code>fixed</code>: Positioned relative to the browser viewport; stays on screen while scrolling. (Use case: navbar).</li>
+        <li><code>sticky</code>: Toggles between relative and fixed based on scroll position. (Use case: sticky table headers).</li>
+      </ul>
+    </div>
+
+    <!-- Q11 & A11 -->
+    <div class="question">Q11. What is Flexbox? Explain flex-direction, justify-content, align-items, flex-wrap, gap, and align-self.</div>
+    <div class="answer">
+      <p><strong>Flexbox</strong> is a 1-dimensional layout model for arranging items along a row or column.</p>
+      <ul>
+        <li><code>flex-direction</code>: Sets the layout direction (<code>row</code>, <code>column</code>).</li>
+        <li><code>justify-content</code>: Aligns items along the main axis (<code>flex-start</code>, <code>center</code>, <code>space-between</code>).</li>
+        <li><code>align-items</code>: Aligns items along the cross axis (<code>stretch</code>, <code>center</code>).</li>
+        <li><code>flex-wrap</code>: Controls whether items wrap onto new lines (<code>nowrap</code>, <code>wrap</code>).</li>
+        <li><code>gap</code>: Spacing between flex items.</li>
+        <li><code>align-self</code>: Overrides cross-axis alignment for an individual child item.</li>
+      </ul>
+    </div>
+
+    <!-- Q12 & A12 -->
+    <div class="question">Q12. What is CSS Grid? Explain grid-template-columns, grid-template-rows, gap, grid-column, grid-row, repeat(), and fr.</div>
+    <div class="answer">
+      <p><strong>CSS Grid</strong> is a 2-dimensional layout system that handles rows and columns simultaneously.</p>
+      <pre>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: auto;
+  gap: 15px; /* Gutter between cells */
+}
+
+.item {
+  grid-column: 1 / 3; /* Spans across 2 columns */
+  grid-row: span 2;    /* Spans across 2 rows */
+}</pre>
+    </div>
+
+    <!-- Q13 & A13 -->
+    <div class="question">Q13. What is responsive web design? Explain flexible layouts, responsive units, responsive images, and breakpoints.</div>
+    <div class="answer">
+      <p>Responsive design makes web pages adapt cleanly to any screen size.</p>
+      <ul>
+        <li><strong>Flexible Layouts:</strong> Using Flexbox or Grid instead of fixed pixel widths.</li>
+        <li><strong>Responsive Units:</strong> Using <code>%</code>, <code>rem</code>, <code>vw</code>, and <code>vh</code>.</li>
+        <li><strong>Responsive Images:</strong> Using <code>img { max-width: 100%; height: auto; }</code> to prevent overflow.</li>
+        <li><strong>Breakpoints:</strong> Screen width points where layout changes using media queries.</li>
+      </ul>
+    </div>
+
+    <!-- Q14 & A14 -->
+    <div class="question">Q14. What are CSS media queries? Explain how @media is used to create responsive layouts.</div>
+    <div class="answer">
+      <p>Media queries apply styles conditionally based on device width or screen type.</p>
+      <pre>/* Default for mobile */
+.box { width: 100%; }
+
+/* Tablet and desktop screens */
+@media (min-width: 768px) {
+  .box { width: 50%; }
+}</pre>
+    </div>
+
+    <!-- Q15 & A15 -->
+    <div class="question">Q15. What is the difference between a pseudo-class and a pseudo-element? Explain :hover, :focus, :checked, :nth-child(), ::before, and ::after.</div>
+    <div class="answer">
+      <ul>
+        <li><strong>Pseudo-class (<code>:</code>):</strong> Styles an element in a specific state.
+          <ul>
+            <li><code>:hover</code> (mouse hover), <code>:focus</code> (input selected), <code>:checked</code> (checkbox checked), <code>:nth-child(n)</code> (targets specific index).</li>
+          </ul>
+        </li>
+        <li><strong>Pseudo-element (<code>::</code>):</strong> Inserts and styles virtual elements not in HTML.
+          <ul>
+            <li><code>::before</code> (inserts content before element) and <code>::after</code> (inserts content after element). Requires <code>content: "";</code>.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Q16 & A16 -->
+    <div class="question">Q16. What is CSS specificity? Explain cascade, inheritance, source order, and !important.</div>
+    <div class="answer">
+      <p><strong>Specificity</strong> determines which rule wins when multiple rules target the same element:</p>
+      <p>Inline style > ID selector > Class/Attribute selector > Element selector.</p>
+      <ul>
+        <li><strong>Cascade:</strong> Combines specificity, importance, and source order to choose winning styles.</li>
+        <li><strong>Inheritance:</strong> Child elements inherit properties like font and color from parents.</li>
+        <li><strong>Source Order:</strong> The last rule in the stylesheet wins if specificity is equal.</li>
+        <li><strong><code>!important</code>:</strong> Overrides normal specificity rules.</li>
+      </ul>
+    </div>
+
+    <!-- Q17 & A17 -->
+    <div class="question">Q17. Explain the difference between CSS transitions, transforms, and animations with examples.</div>
+    <div class="answer">
+      <ul>
+        <li><strong>Transforms:</strong> Modifies shape, position, or size (e.g., <code>transform: scale(1.1) rotate(10deg);</code>).</li>
+        <li><strong>Transitions:</strong> Smoothly animates property changes between two states (e.g., <code>transition: all 0.3s ease;</code>).</li>
+        <li><strong>Animations:</strong> Uses <code>@keyframes</code> to create automatic, multi-step animations without user action.</li>
+      </ul>
+    </div>
+
+    <!-- Q18 & A18 -->
+    <div class="question">Q18. What are CSS variables (custom properties)? Explain var(), calc(), min(), max(), and clamp().</div>
+    <div class="answer">
+      <p>CSS variables store reusable values using <code>--name</code> and <code>var(--name)</code>.</p>
+      <pre>:root {
+  --main-color: #007bff;
+}
+
+.box {
+  background-color: var(--main-color);
+  width: calc(100% - 40px);         /* Dynamic math */
+  height: min(300px, 50vh);         /* Picks smaller value */
+  padding: max(10px, 2vw);          /* Picks larger value */
+  font-size: clamp(14px, 2vw, 22px);/* Keeps value between min and max */
+}</pre>
+    </div>
+
+    <!-- Q19 & A19 -->
+    <div class="question">Q19. Explain box-shadow, text-shadow, linear-gradient(), radial-gradient(), and object-fit (contain vs cover).</div>
+    <div class="answer">
+      <ul>
+        <li><code>box-shadow</code>: Adds shadow around an element box (<code>box-shadow: 2px 2px 5px #aaa;</code>).</li>
+        <li><code>text-shadow</code>: Adds shadow to text (<code>text-shadow: 1px 1px 2px #000;</code>).</li>
+        <li><code>linear-gradient()</code>: Color transition in a straight direction.</li>
+        <li><code>radial-gradient()</code>: Color transition radiating from a center point.</li>
+        <li><code>object-fit</code>:
+          <ul>
+            <li><code>contain</code>: Keeps aspect ratio, shows full image (may show empty space).</li>
+            <li><code>cover</code>: Keeps aspect ratio, fills the entire box (crops edges if needed).</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Q20 & A20 -->
+    <div class="question">Q20. How would you use CSS concepts such as Flexbox, Grid, positioning, and media queries to build common UI components?</div>
+    <div class="answer">
+      <ul>
+        <li><strong>Navbar:</strong> Use Flexbox (<code>display: flex; justify-content: space-between;</code>) and <code>position: sticky; top: 0;</code>.</li>
+        <li><strong>Card Grid:</strong> Use CSS Grid (<code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>).</li>
+        <li><strong>Login Form:</strong> Center horizontally and vertically using Flexbox on parent container.</li>
+        <li><strong>Sidebar:</strong> Two-column Grid (<code>200px 1fr</code>) that switches to full width on mobile via media queries.</li>
+        <li><strong>Footer:</strong> Flexbox column container with <code>margin-top: auto;</code> to pin the footer to the bottom.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

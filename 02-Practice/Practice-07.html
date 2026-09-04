@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DISPLAY</title>
+    <style>
+        /* DISPLAY */
+        .box div, .box span{
+            width: 200px;
+            padding: 20px;
+            margin: 30px;
+        }
+        .block div{
+            background-color: lightsalmon;
+            display: block;
+        }
+
+        .inline span{
+            background-color: lightskyblue;
+            display: inline;
+        }
+        .inline-block span{
+            background-color: lightcoral;
+            display: inline-block;
+        }
+        .hide-me{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- DISPLAY -->
+
+    <h2>Q14. Display Properties</h2>
+
+    <div class="block box">
+        <div>Block Element</div>
+        <div>Block Element</div>
+    </div>
+
+    <div class="inline box">
+        <span>Inline Element</span>
+        <span>Inline Element</span>
+    </div>
+
+    <div class="inline-block box">
+        <span>Inline Block</span>
+        <span>Inline Block</span>
+    </div>
+
+    <div class="hide-me box">
+        This element should disappear.
+    </div>
+
+    <!-- Requirements:
+         - Practice block
+         - Practice inline
+         - Practice inline-block
+         - Hide .hide-me using display
+    -->
+
+</body>
+</html>

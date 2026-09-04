@@ -1,0 +1,129 @@
+<!DOCtype= html>
+<html lang"en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTORS</title>
+    <style>
+         
+        /* GROUPING SELECTOR */
+            
+        h3,h4,h5{
+                color: darkcyan;
+            }
+
+        /* ATTRIBUTE SELECTOR */
+            
+        [type="text"]{
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        /* DESCENDANT & CHILD SELECTORS */
+
+        .parent-box p{
+            color: blue;
+        }
+
+        .parent-box>p{
+            color: green;
+        }
+
+        /* SIBLING SELECTORS */
+        
+        .title{
+            font-size: 22px;
+            font-weight: 600;
+            color: darkmagenta;
+        }
+        .title+.next{
+            color: lightseagreen;
+        }
+
+        .title~.other{
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS SELECTORS</h1>
+
+    <!-- GROUPING SELECTOR -->
+    
+
+    <h2>Q3. Grouping Selector</h2>
+
+    <h3>Frontend Development</h3>
+
+    <h4>HTML</h4>
+
+    <h5>CSS</h5>
+
+    <!-- Requirements:
+         - Give h3, h4 and h5 the same text color
+         - Use one grouping selector
+    -->
+
+
+    <!-- ATTRIBUTE SELECTOR -->
+    
+
+    <h2>Q4. Attribute Selector</h2>
+
+    <input type="text" placeholder="Enter your name">
+
+    <input type="email" placeholder="Enter your email">
+
+    <input type="password" placeholder="Enter password">
+
+    <!-- Requirements:
+         - Style only the text input
+         - Give it a border
+         - Add padding
+         - Do not use a class= or ID
+         - Use an attribute selector
+    -->
+
+    <!-- DESCENDANT & CHILD SELECTORS -->
+     
+
+    <h2>Q5. Descendant and Child Selectors</h2>
+
+    <div class="parent-box">
+
+        <p>Direct child paragraph</p>
+
+        <div>
+
+            <p>Nested paragraph</p>
+
+        </div>
+
+    </div>
+
+    <!-- Requirements:
+         - Make all paragraphs inside .parent-box blue
+         - Make only direct child paragraphs green
+         - Use descendant and child selectors
+    -->
+
+
+    <!-- SIBLING SELECTORS -->
+    
+
+    <h2>Q6. Sibling Selectors</h2>
+
+    <p class="title">Main Title</p>
+
+    <p class="next">Adjacent paragraph</p>
+
+    <p class="other">General sibling paragraph</p>
+
+    <p class="other">Another sibling paragraph</p>
+
+    <!-- Requirements:
+         - Style .next using the adjacent sibling selector
+         - Style .other using the general sibling selector
+    -->
+</body>
+</html>

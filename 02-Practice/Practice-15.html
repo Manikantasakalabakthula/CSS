@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+    <style>
+        /* ANIMATIONS */
+        .animation-box{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            color: white;
+            padding: 10px;
+            animation: animateBox 3s ease-in-out infinite alternate;
+        }
+        @keyframes animateBox{
+            from {
+                transform: translate(0px);
+                scale: 1;
+                background-color: darkorchid;
+            }
+            to{
+                transform: translate(100px);
+                scale: 1.5;
+                background-color: darkorange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ANIMATIONS -->
+
+    <h2>Q31. CSS Animation</h2>
+
+    <div class="animation-box">
+        Animate Me
+    </div>
+
+    <!-- Requirements:
+         - Create @keyframes
+         - Move the box
+         - Change its size
+         - Change its background
+         - Set animation duration
+         - Set animation iteration count
+    -->
+</body>
+</html>

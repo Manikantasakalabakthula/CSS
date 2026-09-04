@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS OBJECT FIT</title>
+    <style>
+        /* OBJECT-FIT */
+        img{
+            width: 500px;
+            height: 200px;
+            margin: 20px;
+        }
+        .contain{
+            object-fit: contain;
+        }
+        .cover{
+            object-fit: cover;
+        }
+        .fill{
+            object-fit: fill;
+        }
+        .object-position{
+            object-fit: contain;
+            object-position: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- OBJECT-FIT -->
+
+    <h2>Q36. Object Fit</h2>
+
+    <img
+        class="practice-image contain"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+    <img
+        class="practice-image cover"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+    
+    <img
+        class="practice-image fill"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+    <img
+        class="practice-image object-position"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        alt="Mountain landscape"
+    >
+
+    <!-- Requirements:
+         - Set width and height
+         - Practice object-fit: contain
+         - Practice object-fit: cover
+         - Practice object-fit: fill
+         - Practice object-position
+    -->
+</body>
+</html>

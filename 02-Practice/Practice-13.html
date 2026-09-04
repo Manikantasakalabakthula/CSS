@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SPECIFICITY AND SOURCE ORDER</title>
+    <style>
+        /* SPECIFICITY */
+        #specific-text{
+            background-color: lightskyblue;
+            padding: 10px 20px;
+        }
+        .specific-text{
+            background-color: lightcoral;
+        }
+        p{
+            background-color: lightsalmon;
+        }
+
+        /* CASCADE & SOURCE ORDER */
+        .cascade-text{
+            background-color: lightsalmon;
+            padding: 10px 20px;
+        }
+        p{
+            background-color: lightpink;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- SPECIFICITY -->
+
+    <h2>Q27. Specificity</h2>
+
+    <p
+        id="specific-text"
+        class="specific-text"
+    >
+        Which color will be applied?
+    </p>
+
+    <!-- Requirements:
+         Create CSS rules using:
+         - element selector
+         - class selector
+         - ID selector
+
+         Observe which rule wins.
+    -->
+
+
+    <!-- CASCADE & SOURCE ORDER -->
+
+    <h2>Q28. Cascade</h2>
+
+    <p class="cascade-text">
+        Test CSS cascade and source order.
+    </p>
+
+    <!-- Requirements:
+         Create multiple rules targeting this element.
+         Change their order and observe the result.
+    -->
+
+</body>
+</html>

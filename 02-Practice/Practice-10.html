@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container, .responsive-grid{
+            min-height: 240px;
+            background-color: #ccc;
+            padding: 5vw;
+        }
+        .grid-container div, .responsive-grid div{
+            padding: 10px;
+            background-color: lightskyblue;
+            border-radius: 10px;
+        }
+        /* GRID */
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 50px 100px;
+            gap: 10px;
+        }
+
+        /* GRID FUNCTIONS */
+        .responsive-grid{
+            margin-bottom: 20px;
+            display: grid;
+            gap: 10px;
+        }
+        /* repeat() */
+        .one{
+            grid-template-rows: 100px 50px 100px;
+            grid-template-columns: repeat(2, 250px);
+        }
+
+        /* fr */
+        .two{
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* minmax() */
+        .three{
+            grid-template-rows: minmax(100px, 2fr) 1fr 2fr;
+            grid-template-columns: minmax(100px, 2fr) 1fr;
+        }
+    </style>
+</head>
+<body>
+    <!-- GRID -->
+
+    <h2>Q19. CSS Grid</h2>
+
+    <div class="grid-container">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </div>
+
+    <!-- Requirements:
+         - Create a grid
+         - Create 3 columns
+         - Add rows
+         - Add gap
+         - Practice grid-column
+         - Practice grid-row
+    -->
+
+
+    <!-- GRID FUNCTIONS -->
+
+    <h2>Q20. Grid Functions</h2>
+
+    <h3>repeat()</h3>
+    <div class="responsive-grid one">
+
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+        <div>Card 5</div>
+        <div>Card 6</div>
+
+    </div>
+
+    <h3>fr</h3>
+    <div class="responsive-grid two">
+
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+        <div>Card 5</div>
+        <div>Card 6</div>
+
+    </div>
+    
+    <h3>minmax()</h3>
+    <div class="responsive-grid three">
+
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+        <div>Card 5</div>
+        <div>Card 6</div>
+
+    </div>
+
+    <!-- Requirements:
+         Use:
+         - repeat()
+         - fr
+         - minmax()
+         - gap
+
+         Make the grid responsive.
+    -->
+</body>
+</html>

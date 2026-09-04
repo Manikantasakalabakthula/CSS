@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PSEUDO CLASSES</title>
+    <style>
+        /* PSEUDO-CLASSES */
+        /* :hover */
+        .practice-link{
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .practice-link:hover{
+            color: red;
+        }
+
+        /* :active */
+        button{
+            display: block;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            background-color: orangered;
+            margin-bottom: 5px;
+        }
+        .practice-button:active{
+            background-color: blue;
+        }
+
+        /* :focus */
+        .focus-input{
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .focus-input:focus{
+            background-color: lightblue;
+        }
+
+        /* :visited */
+        .practice-link:visited{
+            color: orange;
+        }
+
+        /* FORM PSEUDO-CLASSES */
+        label{
+            color: olivedrab;
+        }
+        /* :checked */
+        [type="checkbox"]:checked+label{
+            color: red;
+        }
+
+        /* :disabled */
+        [disabled]:disabled{
+            background-color: blue;
+        }
+
+        /* CHILD PSEUDO-CLASSES */
+        /* :first-child */
+        .child-list li:first-child{
+            color: darkred !important;
+        }
+
+        /* :last-child */
+        .child-list li:last-child{
+            color: darkblue;
+        }
+
+        /* :nth-child */
+        .child-list li:nth-child(2n+2){
+            color: darkgreen;
+        }
+
+        /* :nth-last-child */
+        .child-list li:nth-last-child(2n+3){
+            color: darkviolet;
+        }
+
+        /* PSEUDO-ELEMENTS */
+        /* ::before */
+        .pseudo-text::before{
+            content: "★";
+            font-size: 24px;
+            color: darkorange;
+        }
+
+        /* ::after */
+        .pseudo-text::after{
+            content: "★";
+            font-size: 24px;
+            color: darkgoldenrod;
+        }
+
+        /* ::first-letter */
+        .pseudo-text::first-letter{
+            font-size: 48px;
+        }
+
+        /* ::first-line */
+        .first-line-text::first-line{
+            color: deeppink;
+        }
+
+        /* ::placeholder */
+        .placeholder-input::placeholder{
+            color:black;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- PSEUDO-CLASSES -->
+
+    <h2>Q23. Pseudo-Classes</h2>
+
+    <a href="#" class="practice-link">
+        Hover over this link
+    </a>
+
+    <button class="practice-button">
+        Click Me
+    </button>
+
+    <input
+        class="focus-input"
+        type="text"
+        placeholder="Focus on this input"
+    >
+
+    <!-- Requirements:
+         Practice:
+         - :hover
+         - :active
+         - :focus
+         - :visited
+    -->
+
+
+    <!-- FORM PSEUDO-CLASSES -->
+
+    <h2>Q24. Form Pseudo-Classes</h2>
+
+    <input type="checkbox" id="subscribe">
+
+    <label for="subscribe">
+        Subscribe
+    </label>
+
+    <br><br>
+
+    <button disabled>
+        Disabled Button
+    </button>
+
+    <!-- Requirements:
+         Practice:
+         - :checked
+         - :disabled
+    -->
+
+
+    <!-- CHILD PSEUDO-CLASSES -->
+
+    <h2>Q25. Child Selectors</h2>
+
+    <ul class="child-list">
+
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Last Item</li>
+
+    </ul>
+
+    <!-- Requirements:
+         Practice:
+         - :first-child
+         - :last-child
+         - :nth-child()
+         - :nth-last-child()
+    -->
+
+
+    <!-- PSEUDO-ELEMENTS -->
+
+    <h2>Q26. Pseudo-Elements</h2>
+
+    <p class="pseudo-text">
+        Practice pseudo-elements using this paragraph.
+    </p>
+
+    <p class="first-line-text">
+        This paragraph contains multiple lines of text. <br>
+        Use pseudo-elements to style the first line. <br>
+        Practice different pseudo-element selectors.
+    </p>
+
+    <input
+        type="text"
+        class="placeholder-input"
+        placeholder="Style this placeholder"
+    >
+
+    <!-- Requirements:
+         Practice:
+         - ::before
+         - ::after
+         - ::first-letter
+         - ::first-line
+         - ::placeholder
+    -->
+</body>
+</html>

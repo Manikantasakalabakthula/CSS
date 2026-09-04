@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRANSITIONS AND TRANSFORMS</title>
+    <style>
+        /* TRANSITIONS */
+        .transition-button{
+            padding: 10px 20px;
+            background-color: red;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .transition-button:hover{
+            font-size: 18px;
+            padding: 20px 40px;
+            background-color: blue;
+        }
+
+        /* TRANSFORMS */
+        .transform-box{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: lightblue;
+            padding: 10px;
+            border: 2px solid #444;
+        }
+
+        /* translate() */
+        .translate{
+            transform: translate(10px, 20px); /* translate(left,top) */
+        }
+
+        /* scale() */
+        .scale{
+            transform: scale(1.2);
+        }
+
+        /* rotate() */
+        .rotate{
+            transform: rotate(60deg);
+        }
+
+        /* skew() */
+        .skew{
+            transform: skew(10deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- TRANSITIONS -->
+
+    <h2>Q29. CSS Transition</h2>
+
+    <button class="transition-button">
+        Hover Me
+    </button>
+
+    <!-- Requirements:
+         On hover:
+         - Change background color
+         - Change size
+         - Add transition
+         - Try different transition timing functions
+    -->
+
+
+    <!-- TRANSFORMS -->
+
+    <h2>Q30. CSS Transform</h2>
+
+    <h3>TRANSLATE</h3>
+    <div class="transform-box translate">
+        Transform Me
+    </div>
+
+    <h3>SCALE</h3>
+    <div class="transform-box scale">
+        Transform Me
+    </div>
+
+    <h3>ROTATE</h3>
+    <div class="transform-box rotate">
+        Transform Me
+    </div>
+
+    <h3>SKEW</h3>
+    <div class="transform-box skew">
+        Transform Me
+    </div>
+
+    <!-- Requirements:
+         Practice:
+         - translate()
+         - scale()
+         - rotate()
+         - skew()
+    -->
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SHADOWS AND GRADIENTS</title>
+    <style>
+        *{
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            padding: 20px;
+        }
+        /* SHADOWS */
+        .shadow-card {
+            width: 320px;
+            padding: 24px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            font-family: system-ui, sans-serif;
+            box-shadow: 
+                0 10px 25px -5px rgba(0, 0, 0, 0.1),
+                0 8px 10px -6px rgba(0, 0, 0, 0.1),
+                inset 0 0 12px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .shadow-card:hover {
+            box-shadow: 
+                0 20px 30px -10px rgba(0, 0, 0, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.6);
+        }
+
+        .shadow-card h3 {
+            margin-top: 0;
+            color: #1e293b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .shadow-card p {
+            color: #475569;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* GRADIENTS */
+        .gradient-box {
+            width: 280px;
+            height: 140px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-family: system-ui, sans-serif;
+            font-weight: 600;
+            border-radius: 8px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            margin-bottom: 16px;
+            background-image: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+        }
+
+        .gradient-box-radial {
+            background-image: radial-gradient(circle at center, #38bdf8, #1e40af);
+        }
+
+        .gradient-box-repeating-linear {
+            background-image: repeating-linear-gradient(
+                45deg,
+                #f59e0b,
+                #f59e0b 15px,
+                #d97706 15px,
+                #d97706 30px
+            );
+        }
+
+        .gradient-box-repeating-radial {
+            background-image: repeating-radial-gradient(
+                circle,
+                #10b981,
+                #10b981 10px,
+                #047857 10px,
+                #047857 20px
+            );
+        }
+    </style>
+</head>
+<body>
+    <!-- SHADOWS -->
+
+    <h2>Q34. Shadows</h2>
+
+    <div class="shadow-card">
+
+        <h3>Shadow Card</h3>
+
+        <p>
+            Practice box-shadow and text-shadow.
+        </p>
+
+    </div>
+
+    <!-- Requirements:
+         - Add box-shadow
+         - Add text-shadow
+         - Try different blur values
+         - Try inset shadow
+    -->
+
+
+    <!-- GRADIENTS -->
+
+    <h2>Q35. Gradients</h2>
+
+    <div class="gradient-box">Linear Gradient</div>
+    <div class="gradient-box gradient-box-radial">Radial Gradient</div>
+    <div class="gradient-box gradient-box-repeating-linear">Repeating Linear Gradient</div>
+    <div class="gradient-box gradient-box-repeating-radial">Repeating Radial Gradient</div>
+
+    <!-- Requirements:
+         Create examples using:
+         - linear-gradient()
+         - radial-gradient()
+         - repeating-linear-gradient()
+         - repeating-radial-gradient()
+    -->
+</body>
+</html>
